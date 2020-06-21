@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <link rel="stylesheet" href="css/side.css">
+  
+    <!-- google icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      <div id="clouds">
+          <div class="cloud x1"></div>
+          <div class="cloud x1_5"></div>
+          <div class="cloud x2"></div>
+          <div class="cloud x3"></div>
+          <div class="cloud x4"></div>
+          <div class="cloud x5"></div>
+      </div>
+      <div class='c'>
+          <div class='_404'>404</div>
+          <hr>
+          <div class='_1'>THE PAGE</div>
+          <div class='_2'>WAS NOT FOUND</div>
+          <a class='btn' href="index.html">BACK TO MARS</a>
+      </div>
+     
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>var parallax = function(e) {
+        var windowWidth = $(window).width();
+        if (windowWidth < 768) return;
+        var halfFieldWidth = $(".parallax").width() / 2,
+          halfFieldHeight = $(".parallax").height() / 2,
+          fieldPos = $(".parallax").offset(),
+          x = e.pageX,
+          y = e.pageY - fieldPos.top,
+          newX = (x - halfFieldWidth) / 30,
+          newY = (y - halfFieldHeight) / 30;
+        $('.parallax [class*="wave"]').each(function(index) {
+          $(this).css({
+            transition: "",
+            transform:
+              "translate3d(" + index * newX + "px," + index * newY + "px,0px)"
+          });
+        });
+      },
+      stopParallax = function() {
+        $('.parallax [class*="wave"]').css({
+          transform: "translate(0px,0px)",
+          transition: "all .7s"
+        });
+        $timeout(function() {
+          $('.parallax [class*="wave"]').css("transition", "");
+        }, 700);
+      };
+    $(document).ready(function() {
+      $(".not-found").on("mousemove", parallax);
+      $(".not-found").on("mouseleave", stopParallax);
+    });
+    </script>
+    <script src="js/main.js" type="text/javascript"></script>
+   
+  </body>
+</html>

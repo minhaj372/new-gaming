@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- google icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <title>Please Login</title>
+  </head>
+  <body>
+    <div class="form-modal">
+    
+        <div class="form-toggle">
+            <button id="login-toggle" onclick="toggleLogin()">log in</button>
+            <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+        </div>
+    
+        <div id="login-form">
+            <form action="index.html">
+                <input type="text" placeholder="Enter email or username" required/>
+                <input type="password" placeholder="Enter password" required/>
+                <button type="submit" class="btn login">login</button>
+                <p><a href="javascript:void(0)">Forgotten Password ?</a></p>
+                <hr/>
+                <button type="button" class="btn -box-sd-effect"> <i class="fab fa-google fa-lg" aria-hidden="true"></i> sign in with google</button>
+                <button type="button" class="btn -box-sd-effect"> <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i> sign in with linkedin</button>
+                <button type="button" class="btn -box-sd-effect"> <i class="fab fa-windows fa-lg" aria-hidden="true"></i> sign in with microsoft</button>
+            </form>
+        </div>
+    
+        <div id="signup-form">
+            <form action="#">
+                <input type="email" placeholder="Enter your email"/>
+                <input type="text" placeholder="Choose username"/>
+                <input type="password" placeholder="Create password"/>
+                <button type="submit" class="btn signup">create account</button>
+                <p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p>
+                <hr/>
+                <button type="button" class="btn -box-sd-effect"> <i class="fab fa-google fa-lg" aria-hidden="true"></i> sign up with google</button>
+                <button type="button" class="btn -box-sd-effect"> <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i> sign up with linkedin</button>
+                <button type="button" class="btn -box-sd-effect"> <i class="fab fa-windows fa-lg" aria-hidden="true"></i> sign up with microsoft</button>
+            </form>
+        </div>
+    
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script>
+      function toggleSignup(){
+   document.getElementById("login-toggle").style.backgroundColor="#fff";
+   document.getElementById("login-toggle").style.color="#222";
+   document.getElementById("signup-toggle").style.backgroundColor="#7acbd6";
+   document.getElementById("signup-toggle").style.color="#fff";
+   document.getElementById("login-form").style.display="none";
+   document.getElementById("signup-form").style.display="block";
+}
+
+function toggleLogin(){
+   document.getElementById("login-toggle").style.backgroundColor="#7acbd6";
+   document.getElementById("login-toggle").style.color="#fff";
+   document.getElementById("signup-toggle").style.backgroundColor="#fff";
+   document.getElementById("signup-toggle").style.color="#222";
+   document.getElementById("signup-form").style.display="none";
+   document.getElementById("login-form").style.display="block";
+}
+    </script>
+
+  
+   
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
